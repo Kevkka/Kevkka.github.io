@@ -15,6 +15,7 @@ const MovieItem = ({ title, releaseDate, genre, description, posterUrl }) => {
   );
 };
 
+
 MovieItem.propTypes = {
   title: PropTypes.string.isRequired,
   releaseDate: PropTypes.string.isRequired,
