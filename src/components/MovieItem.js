@@ -12,6 +12,7 @@ const MovieItem = ({ title, releaseDate, genre, description, posterUrl }) => {
         <p className="movie-description">{description}</p>
       </div>
     </div>
+    
   );
 };
 
