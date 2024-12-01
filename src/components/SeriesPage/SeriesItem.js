@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import { API_URL } from '../../Config';
+import styles from './SeriesItem.module.css';
 
 const SeriesItem = () => {
     const [series, setSeries] = useState([]);
@@ -16,14 +17,11 @@ const SeriesItem = () => {
         <div>
             <ul>
                 {series.map(series => (
-                    <li key={series.id}>
+                    <li className={styles.card} key={series.id}>
                         <h2>{series.title}</h2>
-                        <a href="/">
-                            <img src={series.poster} alt={series.title} />
+                        <a href={`/series/${series._id}`}>
+                            <img className={styles.img}  src={series.poster} alt={series.title} />
                         </a>
-                        <p>Description: {series.description}</p>
-                        <p>Seasons: {series.seasons}</p>
-                        <p>Episodes: {series.episodes}</p>
                     </li>
                 ))}
             </ul>
