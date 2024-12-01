@@ -18,7 +18,7 @@ function MovieItem({ title, releaseDate, genre, description, posterUrl }) {
 <div className="movie-item">
         <ul>
             {movies.map(movie => (
-            <li key={movie.id}>
+            <li className={styles.card} key={movie.id}>
                 <h2 className={styles.title}>{movie.title}</h2>
                 <p>Description: {movie.description}</p>
                 <p>Release date: {movie.release_date}</p>
