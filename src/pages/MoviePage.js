@@ -1,31 +1,31 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
+import { useState } from 'react';
 import { API_URL } from '../Config';
+import { useParams } from 'react-router-dom';
+import MovieListHeading from '../components/MoviePage/MovielistHeading';
+import MovieItem from '../components/MoviePage/MovieItem';
 
 const MoviePage = () => {
-  const [movies, setMovies] = useState([]);
+    const [movies, setMovies] = useState([]);
+    const id = useParams();
 
-  useEffect(() => {
-    fetch(`${API_URL}/movies`)
+    useEffect(() => {
+        fetch(`${API_URL}/movies`)
         .then(res => res.json())
         .then(data => setMovies(data));
-  }, []);
+    }
+    , []);
+    
+
 
   return (
     <div>
-      <h1>Movie List</h1>
-      <ul>
-        {movies.map(movie => (
-          <li key={movie.id}>
-            <h2>{movie.title}</h2>
-            <p>Description: {movie.description}</p>
-            <p>Release date: {movie.release_date}</p>
-            <p>Director: {movie.director}</p>
-            <p>Cast: {movie.cast}</p>
-          </li>
-        ))}
-      </ul>
+        <MovieListHeading heading='Movies'/>
+        <MovieItem />
     </div>
-  );
+
+)
+
 };
 
 export default MoviePage;
