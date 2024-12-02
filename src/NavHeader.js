@@ -42,7 +42,6 @@ const PageHeader = (props) => {
             </li>
           </ul>
         </nav>
-        <SearchBox />
       </div>
     );
   };

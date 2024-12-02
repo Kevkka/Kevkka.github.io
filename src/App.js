@@ -6,6 +6,9 @@ import SeriesPage from './pages/SeriesPage';
 import NewsPage from './pages/NewsPage';
 import SingleMovie from './components/MoviePage/SingleMovie';
 import SingleSeries from './components/SeriesPage/SingleSeries';
+import EditMovie from './components/MoviePage/EditMovie';
+import CreateMovie from './components/MoviePage/CreateMovie';
+// import EditMovie from './components/MoviePage/EditSingleMovie';
 
 function App() {
   return (
@@ -15,6 +18,11 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/movies" element={<MoviePage />} />
         <Route path="/movies/:_id" element={<SingleMovie />} />
+        {/* <Route path="/movies/:_id/edit" element={<EditMovie />} /> */}
+        <Route path="/movies/add" element={<CreateMovie />} />
+        <Route path="/movies/:_id/edit" element={<EditMovie />} />
+
+
 
 
         <Route path="/series" element={<SeriesPage />} />
