@@ -34,8 +34,13 @@ if (!series) {
             <p>Genre: {series.genre}</p>
             <p>Seasons: {series.seasons}</p>
             <p>Episodes: {series.episodes}</p>
-            <a target='_' href="https://www.youtube.com/watch?v=PLl99DlL6b4">Trailer</a>
-        <button onClick={editHandler}>Edit</button>
+            <iframe
+                width="560"
+                height="315"
+                src={series.trailer}
+            ></iframe>
+            <a className={styles.button} target='_' href={series.trailer}>Click here if not working</a>
+        <button className={styles.edit} onClick={editHandler}>Edit</button>
         <DeleteSeries _id={_id} />
         </div>
     </div>

@@ -1,10 +1,16 @@
 import react, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { API_URL } from '../../Config';
+import { useNavigate } from 'react-router-dom';
 
 
 const DeleteMovie = () => {
     const { _id } = useParams();
+    const navigate = useNavigate();
+
+    const navigateToMovies = () => {
+        navigate('/movies');
+    }
 
 
     const handleDelete = () => {
@@ -15,6 +21,8 @@ const DeleteMovie = () => {
         .then(data => {
             console.log(data);
         });
+
+        navigateToMovies();
     }
 
 

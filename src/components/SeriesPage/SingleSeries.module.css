@@ -28,5 +28,25 @@
   }
 
 
+  .edit{
+    text-decoration: none;
+    text-transform:capitalize;
+    width: 60px;
+  }
+
+
+  .button {
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 560px;
+  }
+
+
+  .button:hover {
+    background-color: #555;
+  }
+
 
 
