@@ -22,7 +22,7 @@ const SeriesPage = () => {
     return (
         <div>
             <h1>Series Page</h1>
-            <button onClick={createHandler}>Create</button>
+            <button onClick={createHandler}>Add Series</button>
             <SeriesItem />
         </div>
     );

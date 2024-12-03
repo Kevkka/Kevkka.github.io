@@ -27,6 +27,7 @@ const editMovie = () => {
 }
 
 return (
+<>
     <div className="movie-item">
         <div className={styles.card}>
             <h2 className={styles.title}>{movie.title}</h2>
@@ -35,11 +36,17 @@ return (
             <p>Genre: {movie.genre}</p>
             <p>Rating: {movie.rating}</p>
             <p>Runtime: {movie.runtime} minutes</p>
-            <a target='_' href="https://www.youtube.com/watch?v=PLl99DlL6b4">Trailer</a>
-            <button onClick={editMovie}>Edit</button>
+            <iframe
+                width="560"
+                height="315"
+                src={movie.trailer}
+            ></iframe>
+            <a className={styles.button} target='_' href={movie.trailer}>Click If Player Not Working</a>
+            <button className={styles.edit} onClick={editMovie}>Edit</button>
             <DeleteMovie id={_id} />
         </div>
     </div>
+</>
 );
 }
 

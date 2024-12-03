@@ -27,6 +27,21 @@
     border-radius: 0 0 5px 5px;
   }
 
+  .button {
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 560px;
+  }
 
 
+  .button:hover {
+    background-color: #555;
+  }
 
+  .edit{
+    text-decoration: none;
+    text-transform:capitalize;
+    width: 60px;
+  }

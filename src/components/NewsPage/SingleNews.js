@@ -32,7 +32,7 @@ const SingleNews = () => {
 
     return (
         <div className='card'>
-            <h2 className='title'>{news.title}</h2>
+            <h2 className='titles'>{news.title}</h2>
             <p>{news.content}</p>
             <p>Author: {news.author}</p>
             <p>Date: {news.published_date}</p>

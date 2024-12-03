@@ -1,10 +1,16 @@
 import react, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { API_URL } from '../../Config';
+import { useNavigate } from 'react-router-dom';
 
 
 const DeleteSeries = () => {
     const { _id } = useParams();
+    const navigate = useNavigate();
+
+    const navigateToSeries = () => {
+        navigate('/series');
+    }
 
 
     const handleDelete = () => {
@@ -15,6 +21,8 @@ const DeleteSeries = () => {
         .then(data => {
             console.log(data);
         });
+
+        navigateToSeries();
     }
 
 
