@@ -5,7 +5,7 @@ import { API_URL } from '../../Config';
 import styles from './MovieItem.module.css';
 import { useParams } from 'react-router-dom';
 
-function MovieItem({ title, releaseDate, genre, description, posterUrl }) {
+function MovieItem({}) {
     const [movies, setMovies] = useState([]);
     const _id = useParams();
 
