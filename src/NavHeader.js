@@ -1,45 +1,24 @@
 import { NavLink } from 'react-router-dom';
 import styles from './NavHeader.module.css';
-import SearchBox from './components/Search';
 
 const PageHeader = (props) => {
     return (
       <div>
         <nav>
 
-          <ul className='nav'>
-            <li>
-              <NavLink 
-                to="/" 
-                className={({ isActive }) => isActive ? styles.active : undefined}
-              >
+          <ul className={styles.nav}>
+            <a className={styles.a} href='/'>
                 Home
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-              to="/movies"
-              className={({ isActive }) => isActive ? styles.active : undefined}
-              >
+            </a>
+            <a className={styles.a} href='/movies'>
                 Movies
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-              to="/series"
-              className={({ isActive }) => isActive ? styles.active : undefined}
-              >
+            </a>
+            <a className={styles.a} href='/series'>
                 Series
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-              to="/news"
-              className={({ isActive }) => isActive ? styles.active : undefined}
-              >
+            </a>
+            <a className={styles.a} href='/news'>
                 News
-              </NavLink>
-            </li>
+            </a>
           </ul>
         </nav>
       </div>

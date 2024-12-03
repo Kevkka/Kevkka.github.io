@@ -11,10 +11,6 @@ const NewsPage = () => {
 
     return (
         <>
-        <nav>
-            <a href="/moviesNews">Movies News</a>
-            <a href="/seriesNews">Series News</a>
-        </nav>
         <div>
             <h1>News Page</h1>
             <button onClick={createHandler}>Add News</button>
