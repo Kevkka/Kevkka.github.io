@@ -8,7 +8,8 @@ import SingleMovie from './components/MoviePage/SingleMovie';
 import SingleSeries from './components/SeriesPage/SingleSeries';
 import EditMovie from './components/MoviePage/EditMovie';
 import CreateMovie from './components/MoviePage/CreateMovie';
-// import EditMovie from './components/MoviePage/EditSingleMovie';
+import CreateSeries from './components/SeriesPage/CreateSeries';
+import EditSeries from './components/SeriesPage/EditSeries';
 
 function App() {
   return (
@@ -16,18 +17,16 @@ function App() {
       <PageHeader />
       <Routes>
         <Route path="/" element={<HomePage />} />
+
         <Route path="/movies" element={<MoviePage />} />
         <Route path="/movies/:_id" element={<SingleMovie />} />
-        {/* <Route path="/movies/:_id/edit" element={<EditMovie />} /> */}
         <Route path="/movies/add" element={<CreateMovie />} />
         <Route path="/movies/:_id/edit" element={<EditMovie />} />
 
-
-
-
         <Route path="/series" element={<SeriesPage />} />
         <Route path="/series/:_id" element={<SingleSeries />} />
-
+        <Route path="/series/add" element={<CreateSeries />} />
+        <Route path="/series/:_id/edit" element={<EditSeries />} />
 
         <Route path ="/news" element={<NewsPage />}/>
       </Routes>
