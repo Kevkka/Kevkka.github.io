@@ -10,6 +10,10 @@ import EditMovie from './components/MoviePage/EditMovie';
 import CreateMovie from './components/MoviePage/CreateMovie';
 import CreateSeries from './components/SeriesPage/CreateSeries';
 import EditSeries from './components/SeriesPage/EditSeries';
+import EditNews from './components/NewsPage/EditNews';
+import CreateNews from './components/NewsPage/CreateNews';
+import SingleNews from './components/NewsPage/SingleNews';
+
 
 function App() {
   return (
@@ -29,6 +33,10 @@ function App() {
         <Route path="/series/:_id/edit" element={<EditSeries />} />
 
         <Route path ="/news" element={<NewsPage />}/>
+        <Route path ="/news/:_id" element={<SingleNews />}/>
+        <Route path ="/news/:_id/edit" element={<EditNews />}/>
+        <Route path ="/news/add" element={<CreateNews />}/>
+        
       </Routes>
     </>
   );
