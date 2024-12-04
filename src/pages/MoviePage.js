@@ -4,6 +4,7 @@ import { API_URL } from '../Config';
 import { useParams, useNavigate } from 'react-router-dom';
 import MovieListHeading from '../components/MoviePage/MovielistHeading';
 import MovieItem from '../components/MoviePage/MovieItem';
+import FooterSection from '../components/FooterSection';
 
 const MoviePage = () => {
     const [movies, setMovies] = useState([]);
@@ -26,6 +27,7 @@ const MoviePage = () => {
         <MovieListHeading heading='Movies'/>
         <button onClick={createHandler}>Add Movie</button>
         <MovieItem />
+        <FooterSection />
     </div>
 
 )

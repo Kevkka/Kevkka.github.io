@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { API_URL } from '../../Config';
 import { useParams } from 'react-router-dom';
 import './NewsItem.scss';
@@ -11,12 +11,16 @@ const NewsItem = ({}) => {
 
 
 
+
     useEffect(() => {
         fetch(`${API_URL}/news`)
             .then(res => res.json())
             .then(data => setNews(data));
     }
     , []);
+
+
+
     return (
         <div>
             <ul>

@@ -18,8 +18,8 @@ const SeriesItem = () => {
             <ul>
                 {series.map(series => (
                     <li className={styles.card} key={series.id}>
-                        <h2>{series.title}</h2>
-                        <a href={`/series/${series._id}`}>
+                        <h2 className={styles.title}>{series.title}</h2>
+                        <a href={`/series/${series._id}`} className={styles.img}>
                             <img className={styles.img}  src={series.poster} alt={series.title} />
                         </a>
                     </li>
