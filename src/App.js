@@ -36,6 +36,7 @@ function App() {
         <Route path ="/news/:_id" element={<SingleNews />}/>
         <Route path ="/news/:_id/edit" element={<EditNews />}/>
         <Route path ="/news/add" element={<CreateNews />}/>
+
         
       </Routes>
     </>

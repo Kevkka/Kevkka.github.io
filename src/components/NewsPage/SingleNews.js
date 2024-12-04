@@ -1,15 +1,17 @@
 import React from 'react';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { API_URL } from '../../Config';
 import DeleteNews from './DeleteNews';
 import './SingleNews.scss';
+import { NewsContext, NewsProvider } from './NewsContext';
 
 const SingleNews = () => {
     const { _id } = useParams();
     const [news, setNews] = useState(null);
     const navigate = useNavigate();
-
+    const ctx = useContext(NewsContext);
+    const { deleteNews, updateNews } = ctx;
 
 
     useEffect(() => {
@@ -30,10 +32,14 @@ const SingleNews = () => {
     }
 
 
+    const deleteHandler = () => deleteNews(_id);
+    const updateHandler = () => updateNews(_id);
+
+
     return (
         <div className='card'>
             <h2 className='titles'>{news.title}</h2>
-            <p>{news.content}</p>
+            <p>Content: {news.content}</p>
             <p>Author: {news.author}</p>
             <p>Date: {news.published_date}</p>
             <a href={news.link}>Link</a>

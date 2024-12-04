@@ -1,10 +1,10 @@
-import react from 'react';
-import { useState, useEffect } from 'react';
 import { API_URL } from '../../Config';
 import { useParams } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const DeleteNews = () => {
     const { _id } = useParams();
+    const navigate = useNavigate();
 
 
     const handleDelete = () => {
@@ -15,9 +15,9 @@ const DeleteNews = () => {
         .then(data => {
             console.log(data);
         });
+
+        navigate('/news');
     }
-
-
 
     return (
         <div>
