@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/Kevkka0.github.io/static/css/main.d08248fc.css",
-    "main.js": "/Kevkka0.github.io/static/js/main.e1016ce9.js",
-    "index.html": "/Kevkka0.github.io/index.html",
-    "main.d08248fc.css.map": "/Kevkka0.github.io/static/css/main.d08248fc.css.map",
-    "main.e1016ce9.js.map": "/Kevkka0.github.io/static/js/main.e1016ce9.js.map"
+    "main.css": "/movies0/static/css/main.d08248fc.css",
+    "main.js": "/movies0/static/js/main.e1016ce9.js",
+    "index.html": "/movies0/index.html",
+    "main.d08248fc.css.map": "/movies0/static/css/main.d08248fc.css.map",
+    "main.e1016ce9.js.map": "/movies0/static/js/main.e1016ce9.js.map"
   },
   "entrypoints": [
     "static/css/main.d08248fc.css",
