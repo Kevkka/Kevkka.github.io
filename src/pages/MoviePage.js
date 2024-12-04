@@ -5,6 +5,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import MovieListHeading from '../components/MoviePage/MovielistHeading';
 import MovieItem from '../components/MoviePage/MovieItem';
 import FooterSection from '../components/FooterSection';
+import styles from './MoviePage.module.css';
 
 const MoviePage = () => {
     const [movies, setMovies] = useState([]);
@@ -23,7 +24,7 @@ const MoviePage = () => {
     , []);
     
   return (
-    <div>
+    <div className={styles.bg}>
         <MovieListHeading heading='Movies'/>
         <button onClick={createHandler}>Add Movie</button>
         <MovieItem />

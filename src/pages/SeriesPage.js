@@ -3,6 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { API_URL } from '../Config';
 import SeriesItem from '../components/SeriesPage/SeriesItem';
 import FooterSection from '../components/FooterSection';
+import styles from './SeriesPage.module.css';
 
 const SeriesPage = () => {
     const [series, setSeries] = useState([]);
@@ -21,7 +22,7 @@ const SeriesPage = () => {
     , []);
 
     return (
-        <div>
+        <div className={styles.bg}>
             <h1>Series Page</h1>
             <button onClick={createHandler}>Add Series</button>
             <SeriesItem />

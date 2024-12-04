@@ -10,15 +10,12 @@ const NewsItem = ({}) => {
     const { _id } = useParams();
 
 
-
-
     useEffect(() => {
         fetch(`${API_URL}/news`)
             .then(res => res.json())
             .then(data => setNews(data));
     }
     , []);
-
 
 
     return (
@@ -30,7 +27,6 @@ const NewsItem = ({}) => {
                         <p> {news.content}</p>
                         <p>Author: {news.author}</p>
                         <p>Date: {news.published_date}</p>
-                        <a href={news.link}>Link</a>
                         <br />
                         <a href={`/news/${news._id}`}>Read More</a>
                     </li>

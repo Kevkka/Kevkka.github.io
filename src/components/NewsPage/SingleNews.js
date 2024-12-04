@@ -42,7 +42,7 @@ const SingleNews = () => {
             <p>Content: {news.content}</p>
             <p>Author: {news.author}</p>
             <p>Date: {news.published_date}</p>
-            <a href={news.link}>Link</a>
+            <a className='link' href={news.link}>Source</a>
             <br />
             <button onClick={editNews}>Edit</button>
             <br />

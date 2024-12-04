@@ -1,19 +1,3 @@
-const newsList = [
-    {
-        _id: '1',
-        title: 'News 1',
-        description: 'Description 1',
-        content: 'Content 1',
-    },
-    {
-        _id: '2',
-        title: 'News 2',
-        description: 'Description 2',
-        content: 'Content 2',
-    },
-]
-
-
 export const ACTION_TYPES = {
     ADD_NEWS: 'ADD_NEWS',
     DELETE_NEWS: 'DELETE_NEWS',
@@ -21,7 +5,7 @@ export const ACTION_TYPES = {
 }
 
  export const NEWS_REDUCER_INITIAL_STATE = {
-    news: newsList,
+    news: [],
 }  
 
  export const reducer = (state, action) => {
