@@ -1,5 +1,5 @@
 {
-  "homepage": "https://Kevkka.github.io/Kevkka.github.io",
+  "homepage": "https://Kevkka.github.io/Test",
   "name": "teams-project",
   "version": "0.1.0",
   "private": true,
@@ -12,7 +12,6 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.7.8",
     "bootstrap": "^5.3.3",
-    "gh-pages": "^6.2.0",
     "json-server": "^1.0.0-beta.3",
     "react": "^18.3.1",
     "react-bootstrap": "^2.10.5",
@@ -28,7 +27,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build" 
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -47,5 +46,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^6.2.0"
   }
 }
