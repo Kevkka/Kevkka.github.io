@@ -23,7 +23,7 @@ const SeriesPage = () => {
 
     return (
         <div className={styles.bg}>
-            <h1>Series Page</h1>
+            <h1 className={styles.page}>Series Page</h1>
             <button onClick={createHandler}>Add Series</button>
             <SeriesItem />
             <FooterSection />
